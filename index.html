@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI-Agent OS — Package Repository</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono&display=swap">
+  <style>
+    :root {
+      --bg: #0d1117;
+      --card: #161b22;
+      --border: #30363d;
+      --text: #e6edf3;
+      --accent: #58a6ff;
+      --accent-subtle: #1f6feb22;
+      --green: #238636;
+      --green-light: #3fb950;
+    }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 40px 20px;
+      display: flex;
+      justify-content: center;
+    }
+    .container {
+      max-width: 800px;
+      width: 100%;
+    }
+    h1 {
+      font-size: 2.4rem;
+      font-weight: 800;
+      margin-bottom: 8px;
+      background: linear-gradient(90deg, #58a6ff, #bc8cff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    p.lead {
+      color: #8b949e;
+      font-size: 1.1rem;
+      margin-top: 0;
+      margin-bottom: 30px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 24px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+    h2 {
+      font-size: 1.3rem;
+      margin-top: 0;
+      color: var(--accent);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 10px;
+    }
+    pre {
+      background: #090d13;
+      border: 1px solid var(--border);
+      padding: 14px 18px;
+      border-radius: 6px;
+      overflow-x: auto;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.95rem;
+      color: #79c0ff;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+    th, td {
+      padding: 10px 14px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+    th {
+      color: #8b949e;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+    }
+    .badge {
+      display: inline-block;
+      padding: 2px 8px;
+      font-size: 0.8rem;
+      background: #23863633;
+      color: #3fb950;
+      border: 1px solid #238636;
+      border-radius: 12px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>AI-Agent OS</h1>
+    <p class="lead">Official Alpine Linux APK Package Repository</p>
+
+    <div class="card">
+      <h2>Quick Install Instructions</h2>
+      <p>Run the following commands inside Alpine Linux:</p>
+
+      <p><strong>1. Trust the Public Signing Key:</strong></p>
+      <pre>wget -P /etc/apk/keys/ https://PushkarP-404.github.io/ai-agent-apk-repo/keys/packager-6acb642e.rsa.pub</pre>
+
+      <p><strong>2. Register Repository:</strong></p>
+      <pre>echo "https://PushkarP-404.github.io/ai-agent-apk-repo" >> /etc/apk/repositories</pre>
+
+      <p><strong>3. Install Packages:</strong></p>
+      <pre>apk update
+apk add ai-agent-daemon llama-server-musl ai-agent-model-lora ai-agent-kernel-modules</pre>
+    </div>
+
+    <div class="card">
+      <h2>Available Packages</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Package</th>
+            <th>Version</th>
+            <th>Type</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>ai-agent-daemon</strong></td>
+            <td>0.1.0-r0</td>
+            <td>Daemon + CLI</td>
+            <td><span class="badge">Signed & Ready</span></td>
+          </tr>
+          <tr>
+            <td><strong>llama-server-musl</strong></td>
+            <td>0.1.0-r0</td>
+            <td>Inference Engine</td>
+            <td><span class="badge">Signed & Ready</span></td>
+          </tr>
+          <tr>
+            <td><strong>ai-agent-model-lora</strong></td>
+            <td>0.1.0-r0</td>
+            <td>Fine-Tuned Adapter</td>
+            <td><span class="badge">Signed & Ready</span></td>
+          </tr>
+          <tr>
+            <td><strong>ai-agent-kernel-modules</strong></td>
+            <td>0.1.0-r0</td>
+            <td>LKM (6.6.142)</td>
+            <td><span class="badge">Signed & Ready</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>
